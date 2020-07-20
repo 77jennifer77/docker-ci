@@ -7,7 +7,7 @@ script:
   - docker images jmchiang/node
 
 before_deploy:
-  - docker login -u jmchiang -p <password>
+  - docker login -u jmchiang -p $docker_pass
 
 deploy:
   provider: script
