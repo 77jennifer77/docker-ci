@@ -9,7 +9,7 @@ COPY package*.json ./
 
 RUN npm install
 
-COPY . /usr/app/app
+COPY . /usr/src/app
 
 EXPOSE 4000
 CMD [ "npm", "start"]
