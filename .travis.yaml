@@ -5,3 +5,12 @@ services:
 script:
   - docker build -t jmchiang/node .
   - docker images jmchiang/node
+
+before_deploy:
+  - docker login -u jmchiang -p <password>
+
+deploy:
+  provider: script
+  script: docker push jmchiang/node
+  on:
+      branch: master
